@@ -1,60 +1,55 @@
-package uebung02;
-
-import static pr.MakeItSimple.print;
-import static pr.MakeItSimple.println;
-import static pr.MakeItSimple.readInt;
+package Fibonacci;
 
 public class Fibonacci {
 	public static void main(String[] args) {
 
-		println("Gewünschte Länge der Fibonacci Folge: ");
+		System.out.println("Desired length of the Fibonacci sequence: ");
 
-		int laenge = readInt();
+		int length = Integer.parseInt(System.console().readLine());
 
-		if (laenge > 2) {
+		if (length > 2) {
 
-			println("\nFibonacci Folge wird berechnet...\n");
+			System.out.println("\nFibonacci sequence is calculated...\n");
 
-			int[] folge = new int[laenge];
+			int[] folge = new int[length];
 
 			folge[0] = 0;
 			folge[1] = 1;
 
 			int i = 2;
 
-			print(folge[0] + ", " + folge[1]);
+			System.out.print(folge[0] + ", " + folge[1]);
 
-			while (i < laenge) {
+			while (i < length) {
 				folge[i] = folge[i - 1] + folge[i - 2];
 
-				print(", " + folge[i]);
+				System.out.print(", " + folge[i]);
 
 				i++;
 
 			}
 
-			println();
-			// print("\n");
+			System.out.print("\n");
 
 			i = 0;
 
-			while (i < laenge) {
+			while (i < length) {
 
-				if (i + 1 != laenge) {
-					print(folge[i] + ", ");
+				if (i + 1 != length) {
+					System.out.print(folge[i] + ", ");
 				} else {
-					print(folge[i]);
+					System.out.print(folge[i]);
 				}
 
 				i++;
 
 			}
 
-			if (laenge > 46) {
-				println("\n(Ergebnis ungültig! Int Overflow. Ab Index 47 sind die Werte nicht korrekt!)");
+			if (length > 46) {
+				System.out.println("\n(Result invalid! Int Overflow. From index 47 the values are not correct!)");
 			}
 		} else {
-			println("\nEingabe ungültig! Nur positive Zahlen > 2.");
+			System.out.println("\nInput invalid! Only positive numbers > 2.");
 		}
 	}
 }
