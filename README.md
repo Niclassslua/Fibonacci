@@ -5,7 +5,9 @@
 *In the Fibonacci sequence, each number calculates the sum of the two previous numbers. The first two numbers are defined as 0 and 1:*
 
 **F0 = 0**
+
 **F1 = 1**
+
 **Fₙ = Fₙ-1 + Fₙ-2**
 
 
